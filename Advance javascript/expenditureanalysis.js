@@ -3,21 +3,14 @@ function totalspent(Transaction){
     Transaction.forEach(item => {
         duplicates.add(item.category);
     });
-    var duplicatesarray = Array.from(duplicates);
-    //console.log(duplicatesarray);
+    var duplicatesarray = Array.from(duplicates)
     var categoryobj = [];
-    
-
     duplicatesarray.map(function(category,index){
-    
-
         if (typeof category === 'string'){
             categoryobj.push({category:category , totalExpense:0});
-            //console.log(categoryobj);
         };
         var items = Transaction.filter(function(item){
             return (item.category) === category;
-            
         });
         var total = items.reduce(function(acc,item){
             return acc + item.price;
@@ -25,11 +18,7 @@ function totalspent(Transaction){
         categoryobj[index].totalExpense = total;
     });
     return categoryobj;
-};
-
-
-
-
+}
 var totalExpense = totalspent([
     {
         itemName: "Shoes",

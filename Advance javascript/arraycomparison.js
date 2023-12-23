@@ -5,10 +5,7 @@ function Arraycomparison(str1,str2){
     else {
          var sortedarray1 = [];
          var sortedarray2 = [];
-        //var sortedarray2 = str2.toLowerCase().split(",").sort().join()
-        //var final1 = str1.toLowerCase().split(",").sort().join()
          for (var element1 in str1){
-            // console.log(element1)
              const alphabet1 = str1[element1];
              var updatedstr1 = alphabet1.toLowerCase().split(',');
              sortedarray1.push(updatedstr1);
