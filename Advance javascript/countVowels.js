@@ -1,11 +1,10 @@
 function countVowels(str) {
-    var vo = [];
+    var vowels = [];
     for (var x in str) {
-        //console.log(str[x])
         if (str[x] === 'a' || str[x] === 'e' || str[x] === 'i' || str[x] === 'o' || str[x] === 'u') {
-            vo.push(str[x]);
+            vowels.push(str[x]);
         }
     }
-    console.log(vo);
+    console.log(vowels);
 }
 countVowels('fatima');
