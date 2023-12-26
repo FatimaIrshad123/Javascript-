@@ -31,27 +31,18 @@ function wait1(t) {
     })
     return p1;
  }
-// wait1(1000).then(function(val){
-//     console.log(val);
-// })
-// wait2(2000).then(function(val){
-//     console.log(val);
-// })
-// wait3(3000).then(function(val){
-//     console.log(val);
-// })
-
-Promise.all([wait1(),wait2(),wait3()]).then(function(value){
-    console.log(value);
+ 
+wait1(1000).then(function(val){
+    console.log(val);
+})
+wait2(2000).then(function(val){
+    console.log(val);
+})
+wait3(3000).then(function(val){
+    console.log(val);
 })
 
-// Async Await without chaining :-
 
-async function result(){
-    let res1 = await wait1()
-    let res2 = await wait2();
-    let res3 = await wait3();
-    console.log(res1,res2,res3);
-    
-}
-result();
+
+
+
